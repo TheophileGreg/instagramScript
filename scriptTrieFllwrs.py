@@ -6,7 +6,7 @@ L.login(login, password)# (login)
 
 
 # Obtain profile metadata
-profile = instaloader.Profile.from_username(L.context, login)
+profile = instaloader.Profile.from_username(L.context, inspectProfil)
 
 followers = set()
 followees = set()
