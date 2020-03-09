@@ -1,12 +1,14 @@
 import instaloader
+from login import *
+
 L = instaloader.Instaloader()
 
 # Login or load session
-L.login(login, password)# (login)
+L.login(loginT, passW)# (login)
 
 
 # Obtain profile metadata
-profile = instaloader.Profile.from_username(L.context, inspectProfil)
+profile = instaloader.Profile.from_username(L.context, 'rudyleguillermic')
 
 followers = set()
 followees = set()
