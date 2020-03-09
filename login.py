@@ -1,2 +1,2 @@
 loginT = 'thile_gr'
-passW = 'z;oprke,klvfhdfvu1os3456'
+passW = 'az;oprke,klvfhdfvu1os3456'
