@@ -1,5 +1,5 @@
 import instaloader
-from login import *
+from /bureau/login import *
 
 L = instaloader.Instaloader()
 
