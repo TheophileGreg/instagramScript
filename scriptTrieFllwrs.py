@@ -1,5 +1,6 @@
 import instaloader
-from /bureau/login import *
+from collections import Counter
+from login import *
 
 L = instaloader.Instaloader()
 
@@ -8,9 +9,9 @@ L.login(loginT, passW)# (login)
 
 
 # Obtain profile metadata
-profile = instaloader.Profile.from_username(L.context, 'rudyleguillermic')
+profile = instaloader.Profile.from_username(L.context, 'lunaloisel')
 
-followers = set()
+""" followers = set()
 followees = set()
 
 for followee in profile.get_followers():
@@ -33,4 +34,18 @@ famous = followees.difference(followers)
 
 print(amies)
 print(famous)
-print(fans)
+print(fans) 
+ """
+mes_likes = []
+
+liker = set() #faire une liste afin de permettre de classer les personnes qui on liker le plus de post 
+for post in profile.get_posts():
+    for like in post.get_likes():
+        mes_likes.append(like.username)
+likes_trie = Counter(mes_likes).most_common()
+print(likes_trie)
+likes_trie = [i[0] for i in likes_trie]
+
+print(likes_trie)
+
+#Trouver pour chaque post qui a liker
