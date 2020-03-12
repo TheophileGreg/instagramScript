@@ -1,4 +1,4 @@
-import instaloader
+from instaloader2 import instaloader 
 from collections import Counter
 from login import *
 
@@ -9,7 +9,7 @@ L.login(loginT, passW)# (login)
 
 
 # Obtain profile metadata
-profile = instaloader.Profile.from_username(L.context, 'lunaloisel')
+profile = instaloader.Profile.from_username(L.context, 'numa_mrn')
 
 """ followers = set()
 followees = set()
